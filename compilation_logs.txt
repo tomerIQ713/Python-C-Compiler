@@ -1,0 +1,322 @@
+Initializing generated lexical automata...
+
+--- ALL LEXER REGEXES USED IN THE COMPILER ---
+Keywords: if | elif | else | while | print | str | int | float | for | in | range | def | return | True | False | and | or | not
+Operators: == | != | >= | <= | += | -= | = | > | < | + | - | * | / | %
+Symbols: : | , | ( | )
+Values: @D@D* for number, @D@D*\.@D@D* for float, @L(@L|@D)* for identifier
+Note: The lexer automata are generated using Thompson -> Subset -> Hopcroft.
+
+Regex: if
+NFA states: 4
+DFA states: 3
+Minimized DFA states: 3
+
+Regex: elif
+NFA states: 8
+DFA states: 5
+Minimized DFA states: 5
+
+Regex: else
+NFA states: 8
+DFA states: 5
+Minimized DFA states: 5
+
+Regex: while
+NFA states: 10
+DFA states: 6
+Minimized DFA states: 6
+
+Regex: print
+NFA states: 10
+DFA states: 6
+Minimized DFA states: 6
+
+Regex: str
+NFA states: 6
+DFA states: 4
+Minimized DFA states: 4
+
+Regex: int
+NFA states: 6
+DFA states: 4
+Minimized DFA states: 4
+
+Regex: float
+NFA states: 10
+DFA states: 6
+Minimized DFA states: 6
+
+Regex: for
+NFA states: 6
+DFA states: 4
+Minimized DFA states: 4
+
+Regex: in
+NFA states: 4
+DFA states: 3
+Minimized DFA states: 3
+
+Regex: range
+NFA states: 10
+DFA states: 6
+Minimized DFA states: 6
+
+Regex: def
+NFA states: 6
+DFA states: 4
+Minimized DFA states: 4
+
+Regex: return
+NFA states: 12
+DFA states: 7
+Minimized DFA states: 7
+
+Regex: True
+NFA states: 8
+DFA states: 5
+Minimized DFA states: 5
+
+Regex: False
+NFA states: 10
+DFA states: 6
+Minimized DFA states: 6
+
+Regex: and
+NFA states: 6
+DFA states: 4
+Minimized DFA states: 4
+
+Regex: or
+NFA states: 4
+DFA states: 3
+Minimized DFA states: 3
+
+Regex: not
+NFA states: 6
+DFA states: 4
+Minimized DFA states: 4
+
+Regex: ==
+NFA states: 4
+DFA states: 3
+Minimized DFA states: 3
+
+Regex: !=
+NFA states: 4
+DFA states: 3
+Minimized DFA states: 3
+
+Regex: >=
+NFA states: 4
+DFA states: 3
+Minimized DFA states: 3
+
+Regex: <=
+NFA states: 4
+DFA states: 3
+Minimized DFA states: 3
+
+Regex: +=
+NFA states: 4
+DFA states: 3
+Minimized DFA states: 3
+
+Regex: -=
+NFA states: 4
+DFA states: 3
+Minimized DFA states: 3
+
+Regex: =
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: >
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: <
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: +
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: -
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: \*
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: /
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: %
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: ,
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: :
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: \(
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: \)
+NFA states: 2
+DFA states: 2
+Minimized DFA states: 2
+
+Regex: @D@D*\.@D@D*
+NFA states: 14
+DFA states: 6
+Minimized DFA states: 4
+
+Regex: @D@D*
+NFA states: 6
+DFA states: 3
+Minimized DFA states: 2
+
+Regex: @L(@L|@D)*
+NFA states: 10
+DFA states: 4
+Minimized DFA states: 2
+
+Generated lexical automata initialized successfully. Count: 39
+
+Line 1: def func(x: int, y: int):
+  def -> Keyword_def
+  func -> Identifier
+  ( -> Left_parenthesis
+  x -> Identifier
+  : -> Colon
+  int -> Type_int
+  , -> Comma
+  y -> Identifier
+  : -> Colon
+  int -> Type_int
+  ) -> Right_parenthesis
+  : -> Colon
+  AUTOMATA: trying FUNCTION_DEF_AUTOMATON: def -> identifier -> parameters -> colon
+  AUTOMATA: FUNCTION_DEF_AUTOMATON: def -> identifier -> parameters -> colon accepted
+
+Line 2: 	return x + y
+  return -> Keyword_return
+  x -> Identifier
+  + -> Operator_plus
+  y -> Identifier
+  AUTOMATA: trying RETURN_AUTOMATON: return -> optional_expression
+  AUTOMATA: RETURN_AUTOMATON: return -> optional_expression accepted
+  AUTOMATA: expression accepted by SINGLE_VALUE_EXPRESSION_AUTOMATON
+  AUTOMATA: expression accepted by SINGLE_VALUE_EXPRESSION_AUTOMATON
+  AUTOMATA: expression accepted by ARITHMETIC_EXPRESSION_AUTOMATON
+
+Line 3: 	print(x)ออ
+  print -> Keyword_print
+  ( -> Left_parenthesis
+  x -> Identifier
+  ) -> Right_parenthesis
+  AUTOMATA: trying PRINT_AUTOMATON: print -> ( expression )
+  AUTOMATA: expression accepted by SINGLE_VALUE_EXPRESSION_AUTOMATON
+  AUTOMATA: PRINT_AUTOMATON accepted
+
+C translation was saved to output.c
+
+
+--- Error Hash Table Results ---
+Line 1 -> Code 0 (SUCCESS)
+Line 2 -> Code 0 (SUCCESS)
+Line 3 -> Code 0 (SUCCESS)
+
+
+--- Symbol Table Results ---
+Name: x          Type: int        Role: parameter  Scope: func       Defined at line: 1
+Name: y          Type: int        Role: parameter  Scope: func       Defined at line: 1
+Name: func       Type: int        Role: function   Scope: global     Defined at line: 2
+
+
+--- Translation Hash Table Results ---
+TOKEN_KEYWORD_PRINT -> printf
+TOKEN_KEYWORD_ELSE -> else
+<=         -> <=
+TOKEN_COLON -> {
+TOKEN_KEYWORD_OR -> ||
+TOKEN_KEYWORD_WHILE -> while
+TOKEN_KEYWORD_IF -> if
+TOKEN_OPERATOR_PLUS -> +
+TOKEN_KEYWORD_TRUE -> 1
+False      -> 0
+TOKEN_LPAREN -> (
+TOKEN_KEYWORD_AND -> &&
+TOKEN_OPERATOR_GTE -> >=
+or         -> ||
+if         -> if
+True       -> 1
+TOKEN_OPERATOR_EQUAL -> ==
+TOKEN_KEYWORD_NOT -> !
+==         -> ==
+TOKEN_OPERATOR_PLUS_ASSIGN -> +=
+%          -> %
+ctype:int  -> int
+TOKEN_OPERATOR_DIVIDE -> /
+TOKEN_OPERATOR_MINUS -> -
+TOKEN_OPERATOR_NOT_EQUAL -> !=
+(          -> (
+)          -> )
+*          -> *
+-=         -> -=
+TOKEN_OPERATOR_ASSIGN -> =
++          -> +
+TOKEN_OPERATOR_GT -> >
+-          -> -
+TOKEN_OPERATOR_MULTIPLY -> *
+/          -> /
+TOKEN_KEYWORD_RETURN -> return
+def        -> void
+:          -> {
+TOKEN_OPERATOR_MINUS_ASSIGN -> -=
+<          -> <
+=          -> =
+>          -> >
+>=         -> >=
+ctype:float -> float
+and        -> &&
+printf:float -> %f
+!=         -> !=
+printf:int -> %d
+TOKEN_OPERATOR_LTE -> <=
+ctype:char* -> char*
+TOKEN_RPAREN -> )
++=         -> +=
+printf:char* -> %s
+elif       -> else if
+not        -> !
+TOKEN_KEYWORD_FALSE -> 0
+else       -> else
+TOKEN_OPERATOR_MODULO -> %
+TOKEN_KEYWORD_ELIF -> else if
+return     -> return
+print      -> printf
+TOKEN_KEYWORD_DEF -> void
+TOKEN_OPERATOR_LT -> <
+while      -> while
