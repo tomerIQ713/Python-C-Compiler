@@ -19,18 +19,15 @@ gcc main.c -o compiler
 OR on Windows (MinGW):
 ```bat
 gcc main.c -o compiler.exe
-compiler.exe
-Project Structure
 ```
 
 Make sure your project contains the following files:
 ```bat
-Models/
+Models/...
 compiler_common.h
 main.c
 input.txt
 compilation_logs.txt
-Input File
 ```
 
 Write your Python-like code inside:
@@ -46,7 +43,6 @@ z = x + y
 ## Output
 After running the compiler, results and logs will be written to:
 `compilation_logs.txt`.
-
 
 **AND** also be saved in the file `output.c`.
 
