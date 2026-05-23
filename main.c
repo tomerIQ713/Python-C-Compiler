@@ -19,7 +19,7 @@ int main()
     TranslationContext* translationContext =
         (TranslationContext*)malloc(sizeof(TranslationContext));
 
-    char* sourceCode = loadInputFile("input.txt"); // Error check: input2.txt
+    char* sourceCode = loadInputFile("input.txt"); 
 
     if (translationContext == NULL || parserContext == NULL || sourceCode == NULL) {
         return ONE;
