@@ -30,6 +30,7 @@ input.txt
 compilation_logs.txt
 ```
 
+## Input
 Write your Python-like code inside:
 `input.txt`
 
