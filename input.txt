@@ -1,3 +1,36 @@
-def func(x: int, y: int):
-	return x + y
-	print(x)
+MAX = 10
+STEP = 2
+
+def add(a, b):
+	sum = 0
+	for i in range(a, b, 1):
+		sum += i
+	return sum
+
+def max2(a: int, b: int):
+	if a > b:
+		return a
+	else:
+		return b
+
+def is_even(x: int):
+	if x % 2 == 0:
+		return True
+	else:
+		return False
+
+total = 0
+
+for i in range(1, MAX, STEP):
+	total += add(i, STEP)
+
+while total < max2(20, MAX):
+	total += STEP
+
+if total > MAX and is_even(total):
+	print(total)
+else:
+	print(0)
+
+text = "Done"
+print(text)
