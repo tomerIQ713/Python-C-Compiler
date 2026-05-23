@@ -1,6 +1,6 @@
-Python-C-Compiler
+## Python-C-Compiler
 
-A compiler that translates Python to C. Implemented in pure C.
+**A compiler that translates Python to C. Implemented in pure C.** 
 
 This project demonstrates the core principles of compiler design, including lexical analysis, parsing, semantic checking, and code translation from a high-level language (Python-like syntax) into C code. It focuses on understanding how programming languages are processed and transformed into executable form.
 
