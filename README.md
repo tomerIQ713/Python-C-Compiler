@@ -46,5 +46,7 @@ z = x + y
 ## Output
 After running the compiler, results and logs will be written to:
 `compilation_logs.txt`.
+
+
 **AND** also be saved in the file `output.c`.
 
