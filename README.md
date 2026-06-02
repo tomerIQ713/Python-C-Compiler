@@ -9,8 +9,8 @@ This project demonstrates the core principles of compiler design, including lexi
 Download the repository.
 
 Compile the project using any C compiler (GCC recommended).
-```bat
 Example (Linux / WSL):
+```bat
 
 gcc main.c -o compiler
 ./compiler
